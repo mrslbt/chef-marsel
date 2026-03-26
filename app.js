@@ -94,6 +94,37 @@ const RECIPES = {
       'Serve next to the cold lettuce (don\'t wilt it!).',
     ],
   },
+
+  'hotaruika-pasta': {
+    number: '04',
+    name: 'Hotaru-ika Pasta',
+    subtitle: 'Firefly Squid & Spring Cabbage',
+    mainIngredient: 'firefly squid',
+    baseWeight: 160,
+    inventory: [
+      { name: 'Firefly Squid (Boiled)', amount: 160, unit: 'g', note: 'Remove eyes, beaks, and cartilage. Wash in Sake after cleaning.' },
+      { name: 'Spaghetti', amount: 200, unit: 'g', note: 'Use a scale' },
+      { name: 'Spring Cabbage', amount: 200, unit: 'g', note: 'Roughly chopped (~1/4 head)' },
+      { name: 'Garlic', amount: 6, unit: 'g', note: '~2 cloves, minced' },
+      { name: 'Red Pepper Flakes', amount: 5, unit: 'g', note: '1 Teaspoon / 5 SPOON (Level)' },
+      { name: 'Mentsuyu (2x concentrate)', amount: 30, unit: 'g', note: '2 Tablespoons / 15 SPOON (x2)' },
+      { name: 'Salted Butter', amount: 30, unit: 'g', note: '15 SPOON (x2 melted)' },
+      { name: 'Salt (for boiling)', amount: 20, unit: 'g', note: '4 Teaspoons / 5 SPOON (x4)' },
+    ],
+    sauceTitle: 'The Wafu Base',
+    sauce: [
+      { name: 'Mentsuyu (2x)',     amount: 30,  unit: 'g', tool: '15 SPOON (x2)' },
+      { name: 'Salted Butter',     amount: 30,  unit: 'g', tool: '15 SPOON (x2 melted)' },
+      { name: 'Red Pepper Flakes', amount: 5,   unit: 'g', tool: '5 SPOON (Level)' },
+    ],
+    steps: [
+      'Squid Prep: Remove eyes, beak, and cartilage from each squid. Wash in a little Sake to remove fishy smell.',
+      'Boil 2L water with salt. Cook spaghetti per package minus 1 minute (al dente). Save the pasta water!',
+      'Melt butter in a large pan over medium heat. Add minced garlic and red pepper flakes. Saut\u00e9 until golden.',
+      'Add chopped cabbage, stir-fry until it softens. Add cleaned squid and cooked pasta.',
+      'Pour in Mentsuyu. If dry, add 2\u20133 Tbsp pasta water for a silky sauce. Toss vigorously 30\u201345s until glossy.',
+    ],
+  },
 };
 
 
