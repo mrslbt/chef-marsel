@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="180" viewBox="0 0 180 180">
+  <rect width="180" height="180" fill="#0A0A0A"/>
+  <text x="90" y="72" text-anchor="middle" font-family="Georgia, serif" font-size="32" font-weight="300" fill="#F5F0EB" letter-spacing="-0.5">Chef</text>
+  <text x="90" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="34" font-weight="400" font-style="italic" fill="#F5F0EB" letter-spacing="-0.5">Marsel</text>
+  <line x1="50" y1="125" x2="130" y2="125" stroke="#D4C5B2" stroke-width="0.5" opacity="0.4"/>
+</svg>
