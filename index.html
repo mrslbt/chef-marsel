@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0A0A0A">
+  <title>Chef Marsel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================ -->
+  <!-- SCREEN 1: MENU SELECTION                     -->
+  <!-- ============================================ -->
+  <div id="screen-menu" class="screen active">
+    <div class="screen__inner">
+      <header class="hero-header">
+        <p class="label hero-header__label">Personal Kitchen</p>
+        <h1 class="hero-header__title">Chef<br><em>Marsel</em></h1>
+        <p class="hero-header__subtitle text-secondary">Select your dish. Enter your weight. Cook with precision.</p>
+      </header>
+
+      <nav class="menu-grid" role="list">
+        <button class="menu-card" data-dish="stir-fry" role="listitem">
+          <span class="menu-card__number label">01</span>
+          <h2 class="menu-card__title">The "Success"<br>Stir-Fry</h2>
+          <p class="menu-card__desc text-secondary">Pork, Pepper &amp; Onion &mdash; heavy, glossy, the hungry-night favorite.</p>
+          <span class="menu-card__cta cta-link">Cook this &rarr;</span>
+        </button>
+
+        <button class="menu-card" data-dish="yakisoba" role="listitem">
+          <span class="menu-card__number label">02</span>
+          <h2 class="menu-card__title">Shio<br>Yakisoba</h2>
+          <p class="menu-card__desc text-secondary">Salt-base noodles &mdash; sleek, vibrant, the designer&rsquo;s choice.</p>
+          <span class="menu-card__cta cta-link">Cook this &rarr;</span>
+        </button>
+
+        <button class="menu-card" data-dish="shogayaki" role="listitem">
+          <span class="menu-card__number label">03</span>
+          <h2 class="menu-card__title">Ginger Pork<br><em>Shogayaki</em></h2>
+          <p class="menu-card__desc text-secondary">The aromatic set-meal classic &mdash; sharp and sophisticated.</p>
+          <span class="menu-card__cta cta-link">Cook this &rarr;</span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="atmospheric-gradient"></div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SCREEN 2: WEIGHT INPUT                       -->
+  <!-- ============================================ -->
+  <div id="screen-input" class="screen">
+    <div class="screen__inner">
+      <button class="back-link cta-link" id="btn-back-to-menu">&larr; Back</button>
+
+      <header class="input-header">
+        <p class="label" id="input-dish-label">Dish 01</p>
+        <h2 class="input-header__title" id="input-dish-name">The "Success" Stir-Fry</h2>
+        <p class="text-secondary input-header__note">Base recipe is for <strong id="input-base-amount">200g pork</strong>.<br>Enter the actual weight of your <span id="input-main-ingredient-name">meat</span>.</p>
+      </header>
+
+      <div class="weight-input-block">
+        <div class="weight-input-wrap">
+          <input
+            type="number"
+            id="weight-input"
+            class="weight-input"
+            inputmode="decimal"
+            min="1"
+            max="9999"
+            step="1"
+            placeholder="200"
+            autocomplete="off"
+            aria-label="Weight of main ingredient in grams"
+          >
+          <span class="weight-input__unit label">grams</span>
+        </div>
+        <button class="calc-btn" id="btn-calculate">Calculate &rarr;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SCREEN 3: RECIPE RESULT                      -->
+  <!-- ============================================ -->
+  <div id="screen-result" class="screen">
+    <div class="screen__inner">
+      <button class="back-link cta-link" id="btn-back-to-input">&larr; Adjust weight</button>
+
+      <header class="result-header">
+        <p class="label" id="result-dish-label">Dish 01</p>
+        <h2 class="result-header__title" id="result-dish-name">The "Success" Stir-Fry</h2>
+        <p class="result-header__ratio label" id="result-ratio">Ratio: 100%</p>
+      </header>
+
+      <!-- INVENTORY -->
+      <section class="result-section">
+        <h3 class="result-section__heading">Inventory</h3>
+        <ul class="ingredient-list" id="result-inventory"></ul>
+      </section>
+
+      <!-- SAUCE MIX -->
+      <section class="result-section">
+        <h3 class="result-section__heading" id="result-sauce-title">The Sauce Mix</h3>
+        <p class="text-secondary result-section__note">Mix in a glass</p>
+        <div class="sauce-table-wrap">
+          <table class="sauce-table" id="result-sauce">
+            <thead>
+              <tr>
+                <th>Ingredient</th>
+                <th>Amount</th>
+                <th>Tool</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- EXECUTION -->
+      <section class="result-section">
+        <h3 class="result-section__heading">The Execution</h3>
+        <ol class="steps-list" id="result-steps"></ol>
+      </section>
+
+      <!-- TOOL GUIDE -->
+      <section class="result-section result-section--tools">
+        <h3 class="result-section__heading">Quick Tool Guide</h3>
+        <ul class="tool-guide">
+          <li><span class="label">15 SPOON</span> Tablespoon (&#22823;&#12373;&#12376; &mdash; Osaji)</li>
+          <li><span class="label">5 SPOON</span> Teaspoon (&#23567;&#12373;&#12376; &mdash; Kosaji)</li>
+          <li><span class="label">2.5 SPOON</span> Half-Teaspoon</li>
+        </ul>
+      </section>
+
+      <button class="restart-link cta-link" id="btn-restart">Start over &rarr;</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
