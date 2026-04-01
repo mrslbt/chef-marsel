@@ -34,7 +34,7 @@ Safari → Share → Add to Home Screen. It works as a standalone app with a cus
 
 ## Stack
 
-Vanilla HTML, CSS, and JavaScript. No frameworks, no build step, no dependencies. Loads instantly.
+Vanilla HTML, CSS, and JavaScript. No frameworks, no build step, no dependencies.
 
 ## Design
 
